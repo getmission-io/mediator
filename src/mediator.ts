@@ -53,3 +53,6 @@ class Mediator {
 }
 
 export { Mediator };
+
+const instance = new Mediator();
+export default instance;
