@@ -1,5 +1,4 @@
-import mediator from './mediator';
-import { handle } from './handle';
+import mediator, { handle } from "./";
 
 class SayHelloRequest {
   name: string;
@@ -7,7 +6,7 @@ class SayHelloRequest {
   constructor(name: string) {
     this.name = name;
   }
-};
+}
 
 @handle({ request: SayHelloRequest })
 class SayHelloHandler {
@@ -16,9 +15,9 @@ class SayHelloHandler {
   }
 }
 
-describe('integration tests', () => {
-  it('executes the handler registered by a decorator', async () => {
-    const result = await mediator.handle(new SayHelloRequest('Tom'));
-    expect(result).toStrictEqual('Hello Tom');
+describe("integration tests", () => {
+  it("executes the handler registered by a decorator", async () => {
+    const result = await mediator.handle(new SayHelloRequest("Tom"));
+    expect(result).toStrictEqual("Hello Tom");
   });
 });

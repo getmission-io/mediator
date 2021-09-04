@@ -2,7 +2,7 @@
   "name": "@getmission/mediator",
   "version": "0.1.0",
   "description": "A simple mediator framework for dispatching CQRS-type request events",
-  "main": "dist/mediator.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
     "test": "jest"
